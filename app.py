@@ -78,7 +78,7 @@ if uploaded_file is not None:
         if data[col].dtype in ['int64', 'float64'] and col != "What's your age":
             user_input[col] = st.number_input(f"Enter value for {col}", value=1,min_value=1,max_value=10)
         elif data[col].dtype in ['int64', 'float64'] and col == "What's your age":
-            user_input[col] = st.number_input(f"Enter value for {col}", value=1,min_value=17,max_value=24)
+            user_input[col] = st.number_input(f"Enter value for {col}", value=18,min_value=17,max_value=24)
         else:
             user_input[col] = st.selectbox(f"Select value for {col}", options=data[col].unique())
 
